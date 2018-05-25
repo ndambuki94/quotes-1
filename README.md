@@ -21,12 +21,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ##License 
 
-This project is licensed under the MIT License - see the [LICENSE.md](../quotes/master/LICENSE)file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](../quotes/master/LICENSE) file for details.
 
 
 ##Acknowldgements
 
-⋅⋅*  [Tour of Heroes](https://angular.io/tutorial)
+[Tour of Heroes](https://angular.io/tutorial)
 
 
 
