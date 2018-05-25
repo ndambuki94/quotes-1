@@ -1,0 +1,11 @@
+.author {
+  font-style: italic;
+  font-weight: bold;
+  text-align: right;
+}
+.btn{
+  margin: 10px;
+}
+.card{
+  margin: 20px;
+}

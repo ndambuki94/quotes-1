@@ -1,5 +1,25 @@
-<div class="row single-quote" *ngFor='let quote of quotes'>
-  <h2>{{quote.author}}</h2>
-  <p>{{quote.text}}</p>
-  <span>Posted by: {{quote.user}}</span>
+<div class="card" *ngFor='let quote of quotes'>
+
+  <div class="card-body">
+
+    <p>"{{quote.text}}"</p>
+
+    <h5 class="author">{{quote.author}}</h5>
+    <p>Posted by: {{quote.user}}</p>
+
+  </div>
+
+  <div class="card-footer row votes">
+    <div class="col-md-4">
+      <button (click)="add(count)" class="btn btn-primary"><i class="fa fa-thumbs-up"></i> {{quote.upvotes}}</button>
+    </div>
+    <div class="col-md-4">
+      <button (click)="add(count)" class="btn btn-primary"><i class="fa fa-thumbs-down"></i> {{quote.downvotes}}</button>
+    </div>
+    <div class="col-md-4">
+      <button (click)="delete(quote)" class="btn btn-danger">delete</button>
+    </div>
+  </div>
+
 </div>
+

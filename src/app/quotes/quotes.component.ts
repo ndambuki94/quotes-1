@@ -8,10 +8,13 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
   quotes = [
-    new Quote('Always find a reason to smile', 'Me', 'Admin', new Date(5, 5, 5, 5, 5, 5)),
-    new Quote('Coding is not for weaklings!', 'Adiela', 'Admin', new Date(5, 5, 5, 5, 5, 5))
-  ];
+    new Quote('Always find a reason to smile', 'Me', 'Admin', 0, 0),
+    new Quote('Coding is not for weaklings!', 'Adiela', 'Admin', 0, 0)
+    ]
 
+  delete(quote): void {
+    this.quotes.splice(quote,1);
+  }
   constructor() { }
 
   ngOnInit() {
