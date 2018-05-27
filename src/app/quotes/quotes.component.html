@@ -38,16 +38,16 @@
 
       <div class="card-footer">
         <div class="row">
-          <div class="col-3 action" (click)="add(count)">
+          <div class="col-3 action">
             {{quote.upvotes}}
           </div>
-          <div class="col-3 action" (click)="add(count)">
+          <div class="col-3 action" (click)="quote.upvotes = quote.upvotes + 1">
             <i class="fa fa-thumbs-up"></i>
           </div>
-          <div class="col-3 action" (click)="add(count)">
+          <div class="col-3 action" (click)="quote.downvotes = quote.downvotes + 1">
             <i class="fa fa-thumbs-down"></i>
           </div>
-          <div class="col-3 action" (click)="add(count)">
+          <div class="col-3 action">
             {{quote.downvotes}}
           </div>
         </div>
