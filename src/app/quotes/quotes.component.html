@@ -25,15 +25,52 @@
 </div>
 
 <div class="row">
-  <div class="col-md-4">
-    <div class="card" *ngFor='let quote of quotes'>
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header text-center">
+        <h3>most popular quote</h3>
+      </div>
+
       <div class="card-body">
         <p>"{{quote.text}}"</p>
+      </div>
+      <div class="card-footer">
         <h5 class="author">{{quote.author}}</h5>
         <span>Posted by: {{quote.poster}}</span>
         <span (click)="delete(quote)" class="del">
         <i class="fa fa-times-circle"></i>
         </span>
+      </div>
+
+      <div class="card-footer">
+        <div class="row">
+          <div class="col-3 action">
+            {{quote.upvotes}}
+          </div>
+          <div class="col-3 action" (click)="quote.upvotes = quote.upvotes + 1">
+            <i class="fa fa-thumbs-up"></i>
+          </div>
+          <div class="col-3 action" (click)="quote.downvotes = quote.downvotes + 1">
+            <i class="fa fa-thumbs-down"></i>
+          </div>
+          <div class="col-3 action">
+            {{quote.downvotes}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="card" *ngFor='let quote of quotes'>
+      <div class="card-body">
+        <p>"{{quote.text}}"</p>
+      </div>
+      <div class="card-footer">
+        <app-quote-details [quote]='quote'></app-quote-details>
       </div>
 
       <div class="card-footer">

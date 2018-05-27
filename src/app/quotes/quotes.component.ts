@@ -49,10 +49,6 @@ export class QuotesComponent implements OnInit {
     this.quotes.splice(quote, 1);
   }
 
-  addCount(quote.upvotes) {
-    quote.upvotes = quote.upvotes + 1
-  }
-
   constructor() { }
 
   ngOnInit() {
