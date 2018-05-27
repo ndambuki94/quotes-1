@@ -1,25 +1,57 @@
-<div class="card" *ngFor='let quote of quotes'>
+<div class="row">
+  <button (click)="onNew()" class="btn btn-primary form-btn">Post a new quote</button>
 
-  <div class="card-body">
+  <form  (ngSubmit)="onSave()" *ngIf="showNew" id="quote-form">
 
-    <p>"{{quote.text}}"</p>
+    <span (click)="onCancel()" class="del"><i class="fa fa-times-circle"></i></span>
 
-    <h5 class="author">{{quote.author}}</h5>
-    <p>Posted by: {{quote.user}}</p>
-
-  </div>
-
-  <div class="card-footer row votes">
-    <div class="col-md-4">
-      <button (click)="add(count)" class="btn btn-primary"><i class="fa fa-thumbs-up"></i> {{quote.upvotes}}</button>
+    <div class="form-group">
+      <label for="text-input">Quote</label>
+      <textarea class="form-control" [(ngModel)]="quoteModel.text" placeholder="Write your quote here" rows="6" name="text" id="text-input"></textarea>
     </div>
-    <div class="col-md-4">
-      <button (click)="add(count)" class="btn btn-primary"><i class="fa fa-thumbs-down"></i> {{quote.downvotes}}</button>
-    </div>
-    <div class="col-md-4">
-      <button (click)="delete(quote)" class="btn btn-danger">delete</button>
-    </div>
-  </div>
 
+    <div class="form-group">
+      <label for="author-input">Author</label>
+      <input class="form-control" type="text" [(ngModel)]="quoteModel.author" name="author" id="author-input" placeholder="Quote Author">
+    </div>
+
+    <div class="form-group">
+      <label for="poster-input">Poster</label>
+      <input id="poster-input" class="form-control" type="text" [(ngModel)]="quoteModel.poster" name="poster" >
+    </div>
+
+    <button type="submit" class="btn btn-primary">{{submitType}}</button>
+  </form>
 </div>
 
+<div class="row">
+  <div class="col-md-4">
+    <div class="card" *ngFor='let quote of quotes'>
+      <div class="card-body">
+        <p>"{{quote.text}}"</p>
+        <h5 class="author">{{quote.author}}</h5>
+        <span>Posted by: {{quote.poster}}</span>
+        <span (click)="delete(quote)" class="del">
+        <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+
+      <div class="card-footer">
+        <div class="row">
+          <div class="col-3 action" (click)="add(count)">
+            {{quote.upvotes}}
+          </div>
+          <div class="col-3 action" (click)="add(count)">
+            <i class="fa fa-thumbs-up"></i>
+          </div>
+          <div class="col-3 action" (click)="add(count)">
+            <i class="fa fa-thumbs-down"></i>
+          </div>
+          <div class="col-3 action" (click)="add(count)">
+            {{quote.downvotes}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
