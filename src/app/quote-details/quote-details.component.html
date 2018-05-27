@@ -1,5 +1,6 @@
 <h5 class="author">{{quote.author}}</h5>
 <span>Posted by: {{quote.poster}}</span>
+<span> {{quote.posttime|timeCount}} minutes ago</span>
 <span (click)="delete(quote)" class="del">
   <i class="fa fa-times-circle"></i>
 </span>

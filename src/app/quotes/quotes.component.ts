@@ -17,7 +17,7 @@ export class QuotesComponent implements OnInit {
 // This method associate to New Button.
   onNew() {
 // Initiate new quote.
-    this.quoteModel = new Quote("","", "", new Date(), 0,0);
+    this.quoteModel = new Quote("","", "", Date(), 0,0);
 // Change submitType to 'Save'.
     this.submitType = 'Save';
 // display quote entry section.
@@ -41,8 +41,8 @@ export class QuotesComponent implements OnInit {
   }
 
   quotes = [
-    new Quote('Always find a reason to smile', 'Me', 'Admin', new Date(2, 2,2,2,2), 0,0),
-    new Quote('Coding is not for weaklings!', 'Adiela', 'Admin', new Date(2, 2,2,2,2), 0, 0)
+    new Quote('Always find a reason to smile', 'Me', 'Admin', new Date(2018, 4,27,23,1), 0,0),
+    new Quote('Coding is not for weaklings!', 'Adiela', 'Admin', new Date(2018, 4,27,23,1), 0, 0)
   ];
 
   delete(quote) {
