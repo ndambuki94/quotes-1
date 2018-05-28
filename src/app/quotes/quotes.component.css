@@ -38,13 +38,13 @@ label{
   margin-right: auto;
 }
 
-.card:nth-child(4n-3) {
+.card:nth-child(6n-5) {
   background-color: #0088ff;
 }
-.card:nth-child(4n-2) {
+.card:nth-child(6n-4) {
   background-color: #ffaa00;
 }
-.card:nth-child(4n-1) {
+.card:nth-child(6n-3) {
   background-color: #ff7700;
 }
 .card:nth-child(4n+0) {
@@ -56,3 +56,20 @@ label{
 .card:nth-child(6n+0) {
   background-color: #aadd22;
 }
+.card-footer{
+  background-color: #eeeeee;
+}
+.card-header{
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+.fa-quote-left{
+  float: left;
+  font-size: 30px;
+}
+.del{
+  color: red;
+  float: right;
+}
+
