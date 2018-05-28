@@ -9,25 +9,27 @@
 .card{
   margin: 20px;
 }
+.card-body{
+  text-align: center;
+  color: #ffffff;
+}
 .action{
   text-align: center;
   color: #777777;
   font-size: 20px;
 }
-
-.card-body{
-  text-align: center;
-  color: #ffffff;
-}
 form{
-  margin: 30px;
   padding: 20px;
-  background-color: rgba(51, 153, 255, 0.5);
+  background-color: #137a63;
   width: 90%;
   border-radius: 10px;
+  position: absolute;
+  z-index: 2;
+  left: 5%;
 }
 label{
   font-weight: bold;
+  color: #ffffff;
   letter-spacing: 2px;
 }
 .cancel-form{

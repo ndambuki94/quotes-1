@@ -17,7 +17,7 @@
 
     <div class="form-group">
       <label for="poster-input">Poster</label>
-      <input id="poster-input" class="form-control" type="text" [(ngModel)]="quoteModel.poster" name="poster" required>
+      <input id="poster-input" class="form-control" type="text" [(ngModel)]="quoteModel.poster" name="poster" placeholder="Your name" required>
     </div>
 
     <button type="submit" class="btn btn-primary">{{submitType}}</button>
@@ -31,7 +31,7 @@
     <div class="card" *ngFor='let quote of quotes'>
       <div class="card-body">
         <i class="fa fa-quote-left"></i>
-        <p appHighlight >{{quote.text}}</p>
+        <p appHighlight=" " >{{quote.text}}</p>
         <p>{{quote.author}}</p>
       </div>
       <div class="card-footer">

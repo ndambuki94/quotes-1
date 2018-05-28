@@ -13,6 +13,10 @@ export class HighlightDirective {
   @HostListener("click") onClicks(){
     this.fontSize("xx-large")
   }
+  mostVotes(){
+    var popularVote = Math.max()
+    this.fontSize("xx-large")
+  }
 
   private fontSize(action:string){
     this.elem.nativeElement.style.fontSize=action;
