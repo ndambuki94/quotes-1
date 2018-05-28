@@ -1,5 +1,5 @@
 <div class="row">
-  <button (click)="onNew()" class="btn btn-primary form-btn">Post a new quote</button>
+  <button (click)="onNew()" class="btn btn-info form-btn" id="form-btn">Post a new quote</button>
 
   <form  (ngSubmit)="onSave()" *ngIf="showNew" id="quote-form">
 
@@ -31,43 +31,9 @@
         <h3>most popular quote</h3>
       </div>
 
-      <div class="card-body">
+      <div class="card-body ">
         <p>"{{quote.text}}"</p>
-      </div>
-      <div class="card-footer">
-        <h5 class="author">{{quote.author}}</h5>
-        <span>Posted by: {{quote.poster}}</span>
-        <span (click)="delete(quote)" class="del">
-        <i class="fa fa-times-circle"></i>
-        </span>
-      </div>
 
-      <div class="card-footer">
-        <div class="row">
-          <div class="col-3 action">
-            {{quote.upvotes}}
-          </div>
-          <div class="col-3 action" (click)="quote.upvotes = quote.upvotes + 1">
-            <i class="fa fa-thumbs-up"></i>
-          </div>
-          <div class="col-3 action" (click)="quote.downvotes = quote.downvotes + 1">
-            <i class="fa fa-thumbs-down"></i>
-          </div>
-          <div class="col-3 action">
-            {{quote.downvotes}}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col-md-4 col-sm-6 col-xs-12">
-    <div class="card" *ngFor='let quote of quotes'>
-      <div class="card-body">
-        <p>"{{quote.text}}"</p>
       </div>
       <div class="card-footer">
         <app-quote-details [quote]='quote'></app-quote-details>
@@ -92,3 +58,38 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+<div class="row">
+  <div class="card-columns">
+
+    <div class="card" *ngFor='let quote of quotes'>
+      <div class="card-body">
+        <p>"{{quote.text}}"</p>
+        <p>{{quote.author}}</p>
+      </div>
+      <div class="card-footer">
+        <app-quote-details [quote]='quote'></app-quote-details>
+      </div>
+
+      <div class="card-footer">
+        <div class="row">
+          <div class="col-3 action">
+            {{quote.upvotes}}
+          </div>
+          <div class="col-3 action" (click)="quote.upvotes = quote.upvotes + 1">
+            <i class="fa fa-thumbs-up"></i>
+          </div>
+          <div class="col-3 action" (click)="quote.downvotes = quote.downvotes + 1">
+            <i class="fa fa-thumbs-down"></i>
+          </div>
+          <div class="col-3 action">
+            {{quote.downvotes}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

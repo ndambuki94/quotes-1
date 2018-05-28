@@ -14,12 +14,10 @@
   color: #777777;
   font-size: 20px;
 }
-.del{
-  color: red;
-  text-align: right;
-}
+
 .card-body{
-  background-color: #ffffff;
+  text-align: center;
+  color: #ffffff;
 }
 form{
   margin: 30px;
@@ -38,4 +36,23 @@ label{
 .form-btn{
   margin-left: auto;
   margin-right: auto;
+}
+
+.card:nth-child(4n-3) {
+  background-color: #0088ff;
+}
+.card:nth-child(4n-2) {
+  background-color: #ffaa00;
+}
+.card:nth-child(4n-1) {
+  background-color: #ff7700;
+}
+.card:nth-child(4n+0) {
+  background-color: #ff0033;
+}
+.card:nth-child(5n+0) {
+  background-color: #9911aa;
+}
+.card:nth-child(6n+0) {
+  background-color: #aadd22;
 }
