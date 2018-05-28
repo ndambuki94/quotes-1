@@ -8,20 +8,14 @@ export class HighlightDirective {
 
   @Input() quote:Quote;
 
-  constructor(private elem:ElementRef){}
+  constructor(private elem:ElementRef) {}
 
   @HostListener("click") onClicks(){
-    this.fontSize("xx-large")
-  }
-  mostVotes(){
-    var popularVote = Math.max()
     this.fontSize("xx-large")
   }
 
   private fontSize(action:string){
     this.elem.nativeElement.style.fontSize=action;
-
   }
-
 
 }

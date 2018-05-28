@@ -49,10 +49,10 @@ label{
 .card:nth-child(6n-3) {
   background-color: #ff7700;
 }
-.card:nth-child(4n+0) {
+.card:nth-child(6n-2) {
   background-color: #ff0033;
 }
-.card:nth-child(5n+0) {
+.card:nth-child(6n-1) {
   background-color: #9911aa;
 }
 .card:nth-child(6n+0) {
@@ -60,11 +60,6 @@ label{
 }
 .card-footer{
   background-color: #eeeeee;
-}
-.card-header{
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 10px;
 }
 .fa-quote-left{
   float: left;

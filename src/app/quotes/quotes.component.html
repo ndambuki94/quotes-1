@@ -1,4 +1,5 @@
-<div class="row">
+<div class="container-fluid">
+  <div class="row">
   <button (click)="onNew()" class="btn btn-info form-btn" id="form-btn">Post a new quote</button>
 
   <form  (ngSubmit)="onSave()" *ngIf="showNew" id="quote-form">
@@ -28,17 +29,18 @@
 <div class="row">
   <div class="card-columns">
 
-    <div class="card" *ngFor='let quote of quotes'>
+    <div class="card" *ngFor='let quote of quotes.reverse();let i = index' >
       <div class="card-body">
         <i class="fa fa-quote-left"></i>
-        <p appHighlight=" " >{{quote.text}}</p>
+        <p>{{quote.text}} </p>
         <p>{{quote.author}}</p>
       </div>
       <div class="card-footer">
         <app-quote-details [quote]='quote'></app-quote-details>
-        <span (click)="delete(quote)" class="del">
-          <i class="fa fa-trash"></i>
-        </span>
+        <span (click)="delete(i)" class="del">
+  <i class="fa fa-trash"></i>
+</span>
+
       </div>
 
       <div class="card-footer">
@@ -61,4 +63,4 @@
   </div>
 </div>
 </div>
-
+</div>

@@ -7,6 +7,7 @@ import { Quote } from '../quote';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+
 // It maintains quote Model
   quoteModel: Quote;
 // It maintains quote form display status. By default it will be false.
@@ -17,7 +18,7 @@ export class QuotesComponent implements OnInit {
 // This method associate to New Button.
   onNew() {
 // Initiate new quote.
-    this.quoteModel = new Quote("","", "", Date(), 0,0);
+    this.quoteModel = new Quote("", "", "", Date(), 0, 0);
 // Change submitType to 'Save'.
     this.submitType = 'Save';
 // display quote entry section.
@@ -53,11 +54,12 @@ export class QuotesComponent implements OnInit {
 
   ];
 
-  delete(quote) {
-    this.quotes.splice(quote, 1);
-  }
 
 
+
+  delete(i) {
+    this.quotes.splice(i, 1);
+      }
 
   constructor() { }
 
