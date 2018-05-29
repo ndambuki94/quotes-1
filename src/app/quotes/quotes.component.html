@@ -29,18 +29,17 @@
 <div class="row">
   <div class="card-columns">
 
-    <div class="card" *ngFor='let quote of quotes.reverse();let i = index' >
+    <div class="card" *ngFor='let quote of quotes;let i = index'  >
       <div class="card-body">
         <i class="fa fa-quote-left"></i>
-        <p>{{quote.text}} </p>
+        <p appHighlight >{{quote.text}} </p>
         <p>{{quote.author}}</p>
       </div>
       <div class="card-footer">
         <app-quote-details [quote]='quote'></app-quote-details>
         <span (click)="delete(i)" class="del">
-  <i class="fa fa-trash"></i>
-</span>
-
+          <i class="fa fa-trash"></i>
+        </span>
       </div>
 
       <div class="card-footer">

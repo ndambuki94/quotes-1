@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
@@ -19,8 +18,7 @@ import { HighlightDirective } from './highlight.directive';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ModalModule.forRoot()
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

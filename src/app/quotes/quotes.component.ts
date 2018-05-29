@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
+import {getFullYear, getMinutes, getSeconds} from 'ngx-bootstrap/chronos/utils/date-getters';
 
 @Component({
   selector: 'app-quotes',
@@ -18,7 +19,7 @@ export class QuotesComponent implements OnInit {
 // This method associate to New Button.
   onNew() {
 // Initiate new quote.
-    this.quoteModel = new Quote("", "", "", Date(), 0, 0);
+    this.quoteModel = new Quote("", "", "", new Date(), 0, 0);
 // Change submitType to 'Save'.
     this.submitType = 'Save';
 // display quote entry section.
@@ -53,7 +54,6 @@ export class QuotesComponent implements OnInit {
     new Quote(' Your time is limited, so don\'t waste it living someone else\'s life. Don\'t be trapped by dogma - which is living with the results of other people\'s thinking. Don\'t let the noise of others\' opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. ', 'Steve Jobs', 'Admin', new Date(2018, 4, 28, 7, 49), 0, 0)
 
   ];
-
 
 
 
